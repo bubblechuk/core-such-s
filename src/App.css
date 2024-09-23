@@ -1,38 +1,89 @@
-.App {
+body.stop-transitions * {
+  transition: none !important;
+}
+.Form {
+  width: 200px;
+  margin: 5px;
+  border: 3px outset gray;
+  background-color: gray;
+}
+input, textarea {
+  margin: 3px;
+  width: 180px;
+}
+#radio {
+  width: 25px;
+}
+label {
+  margin: 3px;
+}
+.product {
+  border: 3px outset gray;
+  background-color: gray;
+  display: flex;
+  width: 1072px;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  /* overflow: scroll; */
+}
+.box {
+  
+  flex: none;
+  border: 3px outset black;
+  width: 250px;
+  height: 300px;
+  margin: 5px;
+}
+.componentContainer {
+  margin: 5px;
+}
+.buttons {
+  display: flex;
+  width: 1072px;
+  background-color: darkgray;
+  border: 3px outset darkgray;
+}
+button {
+  margin: 5px;
+}
+.shopImage {
+  width: 100px;
+  height: 100px;
+}
+table, td, th {
+  margin: 5px;
+  border: 3px solid black;
+  border-collapse: collapse;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+}
+.table {
+  overflow:scroll;
+  height: 275px;
+  border: 1px solid black;
+}
+.tableImage {
+  width: 64px;
+  height: 64px;
+}
+.productTitle {
+  width: 150px;
+  margin: 5px;
+}
+.productContent {
+  display: flex;
+  flex-direction: row;
+}
+.productPrice {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: nowrap;
+  float: right;
+  margin: 5px;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#price {
+  font-size: 24px;
+  color: yellow;
 }

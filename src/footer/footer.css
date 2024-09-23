@@ -1,0 +1,36 @@
+.footer {
+    height: 300px;
+    width: 100%;
+    background-color: #4786b4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer__content hr {
+    margin-bottom: 30px;
+}
+.footer__content span {
+    color: white;
+    margin-left: 25px;
+    user-select: none;
+}
+.footer__content {
+    font-size: 18px;
+    width: 1156px;
+}
+.footer__content ul {
+    padding: 0;
+    margin: 0;
+    margin-left: 25px;
+}
+.footer__content li{
+    list-style-type: none;
+    color: white;
+}
+.footer__links {
+    display: flex;
+    justify-content: space-between;
+}
+.footer__links ul:nth-child(odd) {
+    user-select: none;
+}
