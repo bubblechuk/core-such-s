@@ -1,7 +1,7 @@
 .footer {
     height: 300px;
     width: 100%;
-    background-color: #4786b4;
+    background: linear-gradient(180deg, rgba(0,104,180,1) 25%, rgba(108,171,217,1) 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,4 +33,25 @@
 }
 .footer__links ul:nth-child(odd) {
     user-select: none;
+}
+@media (max-width: 1366px) {
+    .footer {
+        height: 200px;
+    }
+    .footer__links {
+        margin-top: 20px;
+    }
+    .footer__links ul:nth-child(3), .footer__links ul:nth-child(1) {
+        display: none;
+    }
+    .footer__links div {
+        margin: 25px;
+    }
+    .footer__content hr{
+        margin-bottom: 0;
+        border: 0;
+    }
+    .footer__content span {
+        font-size: 14px;
+    }
 }

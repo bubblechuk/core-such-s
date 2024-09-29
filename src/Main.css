@@ -7,11 +7,11 @@
 .mainpage {
     height: var(--mainwidth);
     width: 1366px;
-    /* transform: translateX(-50%);
-    left: 50%;
-    position: absolute; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
-.mainpage div {
+.weekly, .email{
     margin-bottom: 50px;
 }
 .weekly {
@@ -35,9 +35,8 @@
 .weekly__header {
     position: absolute;
     color: white;
-    margin: 25px;
     bottom: 5%;
-    left: 10%;
+    left: 5%;
 }
 .weekly__header h1, .weekly__header h2 {
     margin: 0px;
@@ -60,7 +59,7 @@
 }
 .email h1 {
     font-size: 44px;
-    color: #4786b4;
+    color: #0068B4;
 }
 .email h2 {
     font-size: 24px;
@@ -70,7 +69,7 @@
     margin: 0;
 }
 .email span {
-    color: #4786b4;
+    color: #0068B4;
 }
 .email input {
     border: none;
@@ -84,12 +83,52 @@
     margin: 10px;
 }
 .email button {
-    background-color: #4786b4;
+    background-color: #0068B4;
     border-radius: 10px;
     color: white;
     height: 35px;
     width: 120px;
     border: none;
+}
+@media (max-width: 1000px) {
+    .mainpage {
+        padding-top: 100px;
+    }
+}
+@media (max-width: 1366px) {
+    .mainpage {
+        width: 100%;
+    }
+    .weekly {
+        margin: 0;
+    }
+    .weekly__image {
+        box-shadow: none;
+        width: 100%;
+    }
+    .weekly__image img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover
+    }
+    .weekly__header h1 {
+        font-size: 36px;
+    }
+    .weekly__header h2 {
+        font-size: 24px;
+    }
+    .email h1 {
+        font-size: 33px;
+    }
+    .email h2 {
+        font-size: 18px;
+    }
+    .email input {
+        width: calc(100% - 200px);
+    }
+    .email div {
+        width: 400px;
+    }
 }
 
 

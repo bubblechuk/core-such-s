@@ -9,11 +9,12 @@ export const Main = () => {
             <img src={Smile}/>
             <div className="weekly__bg">
             </div>
-            </div>
             <div className="weekly__header">
                 <h2>Исполнитель недели</h2>
                 <h1>The Smile</h1>
             </div>
+            </div>
+            
             
         </div>
         <div class="genres">
@@ -22,13 +23,13 @@ export const Main = () => {
         <div class="weekly">
             <div class="weekly__image">
                 <img src={Thundercat}/>
-                <div className="weekly__bg" style={{background: "linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 95%)"}}>
-                </div>
-            </div>
-            <div className="weekly__header" style={{color: "black"}}>
+                <div className="weekly__bg" style={{background: "linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 95%)"}}/>
+                <div className="weekly__header" style={{color: "black"}}>
                 <h2>Thundercat: Apocalypse</h2>
                 <h1>Издание "Ten Years Anniversary"</h1>
+                </div>
             </div>
+
         </div>
         <div className="email">
             <h1>Хотите быть в курсе событий?</h1>

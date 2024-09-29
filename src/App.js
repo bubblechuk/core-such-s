@@ -1,8 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { Link } from 'react-router-dom'
-import { SortTable } from './SortTable'
-import {Menu, OrderForm, Cart} from './OrderForm'
-import { Provider } from 'react-redux';
+
 import {Header} from './header/Header'
 import {Main} from './Main'
 import {Footer} from './footer/Footer'
@@ -33,7 +29,6 @@ function App() {
           })
   return (
     <div>
-      <BrowserRouter>
       <Header/>
       <Main/>
     {/* <Menu/>
@@ -42,7 +37,6 @@ function App() {
       <Route path='cart' element={<Cart/>} />
       <Route path='order' element={<OrderForm/>} />
     </Routes> */}
-    </BrowserRouter>
     <Footer/>
     </div>
   )
