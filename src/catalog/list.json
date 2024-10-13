@@ -1,0 +1,227 @@
+[
+    {
+        "title": "Abbey Road",
+        "description": "Легендарный альбом The Beatles, вышедший в 1969 году.",
+        "genre": "Rock",
+        "year": 1969,
+        "tracklist": ["Come Together", "Something", "Here Comes the Sun", "Golden Slumbers"],
+        "price": 29.99,
+        "artist": "The Beatles"
+    },
+    {
+        "title": "Dark Side of the Moon",
+        "description": "Эпический альбом Pink Floyd, символ прогрессивного рока.",
+        "genre": "Progressive Rock",
+        "year": 1973,
+        "tracklist": ["Speak to Me", "Breathe", "Time", "Money"],
+        "price": 24.99,
+        "artist": "Pink Floyd"
+    },
+    {
+        "title": "Thriller",
+        "description": "Самый продаваемый альбом Майкла Джексона.",
+        "genre": "Pop",
+        "year": 1982,
+        "tracklist": ["Thriller", "Beat It", "Billie Jean"],
+        "price": 34.99,
+        "artist": "Michael Jackson"
+    },
+    {
+        "title": "The Wall",
+        "description": "Концептуальный альбом Pink Floyd о самоизоляции.",
+        "genre": "Progressive Rock",
+        "year": 1979,
+        "tracklist": ["Another Brick in the Wall", "Comfortably Numb"],
+        "price": 39.99,
+        "artist": "Pink Floyd"
+    },
+    {
+        "title": "Back in Black",
+        "description": "Альбом AC/DC, посвященный памяти вокалиста Бона Скотта.",
+        "genre": "Hard Rock",
+        "year": 1980,
+        "tracklist": ["Hells Bells", "Back in Black"],
+        "price": 27.99,
+        "artist": "AC/DC"
+    },
+    {
+        "title": "Rumours",
+        "description": "Иконический альбом Fleetwood Mac, наполненный хитами.",
+        "genre": "Rock",
+        "year": 1977,
+        "tracklist": ["Dreams", "Go Your Own Way", "The Chain"],
+        "price": 25.99,
+        "artist": "Fleetwood Mac"
+    },
+    {
+        "title": "Nevermind",
+        "description": "Альбом Nirvana, изменивший историю гранжа.",
+        "genre": "Grunge",
+        "year": 1991,
+        "tracklist": ["Smells Like Teen Spirit", "Come as You Are"],
+        "price": 22.99,
+        "artist": "Nirvana"
+    },
+    {
+        "title": "The Joshua Tree",
+        "description": "Альбом U2, представляющий ирландскую рок-сцену.",
+        "genre": "Rock",
+        "year": 1987,
+        "tracklist": ["With or Without You", "I Still Haven't Found What I'm Looking For"],
+        "price": 26.99,
+        "artist": "U2"
+    },
+    {
+        "title": "OK Computer",
+        "description": "Альбом Radiohead о страхах техногенного будущего.",
+        "genre": "Alternative Rock",
+        "year": 1997,
+        "tracklist": ["Paranoid Android", "No Surprises"],
+        "price": 30.99,
+        "artist": "Radiohead"
+    },
+    {
+        "title": "Purple Rain",
+        "description": "Знаменитый альбом Принса и The Revolution.",
+        "genre": "Pop",
+        "year": 1984,
+        "tracklist": ["Purple Rain", "When Doves Cry"],
+        "price": 28.99,
+        "artist": "Prince"
+    },
+    {
+        "title": "Led Zeppelin IV",
+        "description": "Культовый альбом Led Zeppelin с их главным хитом.",
+        "genre": "Hard Rock",
+        "year": 1971,
+        "tracklist": ["Stairway to Heaven", "Black Dog"],
+        "price": 32.99,
+        "artist": "Led Zeppelin"
+    },
+    {
+        "title": "Born to Run",
+        "description": "Классика Брюса Спрингстина, олицетворяющая мечту свободы.",
+        "genre": "Rock",
+        "year": 1975,
+        "tracklist": ["Born to Run", "Thunder Road"],
+        "price": 21.99,
+        "artist": "Bruce Springsteen"
+    },
+    {
+        "title": "Hotel California",
+        "description": "Альбом The Eagles с одноименным хитом.",
+        "genre": "Rock",
+        "year": 1976,
+        "tracklist": ["Hotel California", "New Kid in Town"],
+        "price": 24.99,
+        "artist": "The Eagles"
+    },
+    {
+        "title": "A Night at the Opera",
+        "description": "Альбом Queen с культовой песней Bohemian Rhapsody.",
+        "genre": "Rock",
+        "year": 1975,
+        "tracklist": ["Bohemian Rhapsody", "You're My Best Friend"],
+        "price": 27.99,
+        "artist": "Queen"
+    },
+    {
+        "title": "Exile on Main St.",
+        "description": "Альбом Rolling Stones, воплощение их духа.",
+        "genre": "Rock",
+        "year": 1972,
+        "tracklist": ["Rocks Off", "Tumbling Dice"],
+        "price": 23.99,
+        "artist": "The Rolling Stones"
+    },
+    {
+        "title": "Pet Sounds",
+        "description": "Новаторский альбом Beach Boys.",
+        "genre": "Pop Rock",
+        "year": 1966,
+        "tracklist": ["Wouldn't It Be Nice", "God Only Knows"],
+        "price": 29.99,
+        "artist": "The Beach Boys"
+    },
+    {
+        "title": "Appetite for Destruction",
+        "description": "Дебютный альбом Guns N' Roses, ставший классикой.",
+        "genre": "Hard Rock",
+        "year": 1987,
+        "tracklist": ["Welcome to the Jungle", "Sweet Child o' Mine"],
+        "price": 28.99,
+        "artist": "Guns N' Roses"
+    },
+    {
+        "title": "Who's Next",
+        "description": "Альбом The Who с сильными музыкальными композициями.",
+        "genre": "Rock",
+        "year": 1971,
+        "tracklist": ["Baba O'Riley", "Won't Get Fooled Again"],
+        "price": 22.99,
+        "artist": "The Who"
+    },
+    {
+        "title": "London Calling",
+        "description": "Культовый альбом The Clash, символ панк-рока.",
+        "genre": "Punk Rock",
+        "year": 1979,
+        "tracklist": ["London Calling", "Train in Vain"],
+        "price": 26.99,
+        "artist": "The Clash"
+    },
+    {
+        "title": "The Velvet Underground & Nico",
+        "description": "Дебютный альбом Velvet Underground, ставший революцией.",
+        "genre": "Art Rock",
+        "year": 1967,
+        "tracklist": ["Sunday Morning", "Venus in Furs"],
+        "price": 31.99,
+        "artist": "The Velvet Underground"
+    },
+    {
+        "title": "Kind of Blue",
+        "description": "Знаменитый джазовый альбом Майлза Дэвиса.",
+        "genre": "Jazz",
+        "year": 1959,
+        "tracklist": ["So What", "Freddie Freeloader"],
+        "price": 27.99,
+        "artist": "Miles Davis"
+    },
+    {
+        "title": "Master of Puppets",
+        "description": "Альбом Metallica, вершина трэш-метала.",
+        "genre": "Thrash Metal",
+        "year": 1986,
+        "tracklist": ["Battery", "Master of Puppets"],
+        "price": 28.99,
+        "artist": "Metallica"
+    },
+    {
+        "title": "The Rise and Fall of Ziggy Stardust",
+        "description": "Космический альбом Дэвида Боуи.",
+        "genre": "Glam Rock",
+        "year": 1972,
+        "tracklist": ["Starman", "Suffragette City"],
+        "price": 26.99,
+        "artist": "David Bowie"
+    },
+    {
+        "title": "Blood on the Tracks",
+        "description": "Глубоко личный альбом Боба Дилана.",
+        "genre": "Folk Rock",
+        "year": 1975,
+        "tracklist": ["Tangled Up in Blue", "Simple Twist of Fate"],
+        "price": 23.99,
+        "artist": "Bob Dylan"
+    },
+    {
+        "title": "Tapestry",
+        "description": "Знаковый альбом Кэрол Кинг.",
+        "genre": "Soft Rock",
+        "year": 1971,
+        "tracklist": ["I Feel the Earth Move", "It's Too Late"],
+        "price": 22.99,
+        "artist": "Carole King"
+    }
+]

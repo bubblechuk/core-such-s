@@ -1,11 +1,10 @@
-// reducers.js
 import { combineReducers } from 'redux';
-import { listsReducer, productsReducer } from './listsSlice'; // Import productsReducer
+import { catalogReducer, cartReducer, sortedReducer} from './listsSlice';
 
 const rootReducer = combineReducers({
-  lists: listsReducer,
-  products: productsReducer, // Include the productsReducer here
-  // Other reducers go here if you have them
+  catalog: catalogReducer,
+  cart: cartReducer,
+  sorted: sortedReducer
 });
 
 export default rootReducer;

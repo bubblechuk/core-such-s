@@ -10,6 +10,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+
 }
 .weekly, .email{
     margin-bottom: 50px;
@@ -92,7 +93,8 @@
 }
 @media (max-width: 1000px) {
     .mainpage {
-        padding-top: 100px;
+        padding-top: 75px;
+        
     }
 }
 @media (max-width: 1366px) {

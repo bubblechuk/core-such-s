@@ -20,7 +20,7 @@
 .header__cart:hover, .header__burger:hover {
     fill: darkgray;
 }
-.header__logo {
+.header__logo a{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -31,16 +31,17 @@
     transition: 0.5s;
     font-size: 40px;
 }
-.header__logo p {
+.header__logo a {
     margin: 0;
     line-height: 50px;
     transition: 0.5s;
+    text-decoration: none;
 }
 .header__logo span {
     font-size: 18px;
     line-height: 18px;
 }
-.header__logo:hover {
+.header__logo a:hover {
     color: darkgray;
     font-size: 70px;
 }
@@ -56,6 +57,9 @@
     flex-direction: column;
     border-right: 1px solid white;
     border-top: 0px;
+}
+.header__menu a{
+    text-decoration: none;
 }
 .header__main {
     background: linear-gradient(180deg, rgba(0,104,180,1) 0%, rgba(49,135,198,1) 75%);
@@ -129,5 +133,12 @@
     }
     .header {
         position:fixed;
+    }
+    .header__logo:hover {
+        color: darkgray;
+        font-size: 40px;
+    }
+    .header {
+        height: 75px;
     }
 }

@@ -1,7 +1,12 @@
 import './Main.css'
 import Smile from './images/smile.png'
 import Thundercat from './images/thundercat.png'
+import { useDispatch, useSelector } from 'react-redux';
 export const Main = () => {
+    const dispatch = useDispatch();
+    const list = useSelector(state => state.catalog.catalog);
+    const sortList = useSelector(state => state.sorted.sorted);
+    console.log(sortList)
     return <div className="main">
         <div className='mainpage'>
         <div className="weekly">
