@@ -28,7 +28,7 @@ export const Footer = () => {
                     <li>Дополнительная информация</li>
                 </ul>
                 <div>
-                <img src={Social}/>
+                <img alt="social" src={Social}/>
                 </div>
             </div>
             <hr/>

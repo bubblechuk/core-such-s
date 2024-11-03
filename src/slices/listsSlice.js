@@ -15,26 +15,8 @@ const catalogSlice = createSlice({
   name: 'catalog',
   initialState,
   reducers: {
-    // addList: (state, action) => {
-    //   state.lists.push(action.payload);
-    // },
-    // removeList: (state, action) => {
-    //   state.lists = state.lists.filter((list) => list.id !== action.payload);
-    // },
-    // cartList: (state, action) => {
-    //   state.lists.forEach((list) => {
-    //     if (list.id === action.payload) {
-    //       list.cart = !list.cart;
-    //     }
-    //   });
-    // },
-    // buyerList: (state, action) => {
-    //   state.lists.forEach((list) => {
-    //     if (list.id === action.payload[0]) {
-    //       list.buyer = action.payload[1];
-    //     }
-    //   });
-    // },
+    addList: (state, action) => {}
+
   },
 });
 const sortedSlice = createSlice({
@@ -143,46 +125,20 @@ const cartSlice = createSlice({
   name: 'cart',
   initialState,
   reducers: {
-  //   addProduct: (state, action) => {
-  //     state.products = [...state.products, action.payload];
-  //   },
-  //   removeProduct: (state, action) => {
-  //     state.products = state.products.filter((product) => product.id !== action.payload);
-  //   },
-
-
-  //   sortListByQuantity: (state, action) => {
-  //     if (sortQuantity === true) {
-  //           state.products.sort((a, b) => a.amount - b.amount);
-  //           sortQuantity=false;
-  //         } else {
-  //           state.products.sort((a, b) => b.amount - a.amount);
-  //           sortQuantity=true;
-  //         }
-  //   },
-  //   sortListByDiscount: (state, action) => {
-  //     if (sortDiscount === true) {
-  //           state.products.sort((a, b) => a.dsc - b.dsc);
-  //           sortDiscount=false;
-  //         } else {
-  //           state.products.sort((a, b) => b.dsc - a.dsc);
-  //           sortDiscount=true;
-  //         }
-  //   },
-  //   Discount1: (state, action) => {
-  //     state.products.sort((a, b) => {
-  //   if (a.new === "true" && b.new === "true") {
-  //     return 0;
-  //   }
-  //   if (a.new === "true" && b.new === "false") return -1;
-  //   if (a.new === "false" && b.new === "true") return 1;
-  // });
-  //   }
+    addCart: (state, action) => {
+      state.cart = [...state.cart, action.payload[0]];
+    },
+    delCart: (state, action) => {
+      state.cart = state.cart.filter(elem => elem.title !== action.payload)
+    },
+    truncateCart: (state, action) => {
+      state.cart = [];
+    }
   },
 });
 
-export const {  } = catalogSlice.actions;
-export const {  } = cartSlice.actions;
+export const {  addList } = catalogSlice.actions;
+export const { addCart, delCart, truncateCart } = cartSlice.actions;
 export const { setSorted, sortListByName, sortList, sortByArtist, sortByGenre, sortByYear } = sortedSlice.actions;
 
 export const catalogReducer = catalogSlice.reducer; 

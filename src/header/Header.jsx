@@ -1,12 +1,32 @@
 import './header.css'
+import { truncateCart } from '../slices/listsSlice';
 import {useState} from 'react'
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'
-import { Main } from '../Main'
-import { Catalog } from '../catalog/Catalog'
+import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom'
+import {delCart} from '../slices/listsSlice'
+import { useForm } from 'react-hook-form';
+import Mastercard from './mastercard.svg'
+import Visa from './visa.svg'
+import Mir from './mir.svg'
 export const Header = () => {
+    const dispatch = useDispatch();
+    const { register, reset, handleSubmit, formState: { errors } } = useForm();
+    const [checkout, openCheckout] = useState("hide");
     const [menu, setMenu] = useState(window.innerWidth<=1000?"-100%":"-600px");
     const [cartmenu, setCartMenu] = useState(window.innerWidth<=1000?"-100%":"-600px");
     const [rotate, setRotation] = useState(0);
+    const cart = useSelector(state => state.cart.cart);
+
+    
+    const cartSumm = () => {
+        let cartsum = 0;
+        cart.map((elem) => {
+            cartsum += parseFloat(elem.price);
+            return null;
+        })
+        return cartsum;
+    }
+    var cartsum = cartSumm();
     window.onresize = () => {
         var wth = window.innerWidth;
         var slide;
@@ -16,12 +36,47 @@ export const Header = () => {
         document.getElementsByClassName("header__burger")[0].style.fill = "";
         document.getElementsByClassName("header__cart")[0].style.fill = "";
     }
+    async function handleEmail(data) {
+      console.log("Sending email with data:", data); 
+      try {
+        const response = await fetch('http://localhost:5000/send-email', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(
+              { 
+                  email: data.email,
+                  subject: "Спасибо за покупку!",
+                  message: `Привет, ${data.cardHolder}! 
+                  Спасибо за вашу покупку в нашем магазине.
+                  ${cart.map((elem) => {
+                    return `${elem.title} - ${elem.price}`
+                  })}
+                  Если вы ничего не заказывали, и вам пришло это сообщение, свяжитесь с нами.
+                  Ваш магазин пластинок, Septima.`
+              }
+          )
+        });
+        const result = await response.json();
+        alert(result.message);
+      } catch (error) {
+        console.error('Error in handleEmail:', error);
+        alert('Failed to send email');
+      }
+    }
+    const onSubmit = (data) => {
+        console.log("Данные карты:", data);
+        handleEmail(data)
+        alert('Успешно!')
+        openCheckout("hide")
+        dispatch(truncateCart())
+        reset();
+      };
     const menuOpen = () => {
         var wth = window.innerWidth;
         var slide;
         wth<=1000?slide="-100%":slide="-600px";
         setTimeout(() => {        setRotation(rotate + 180)}, 100)
-        if(menu=="0%") {
+        if(menu==="0%") {
             setMenu(slide)
             document.getElementsByClassName("header__burger")[0].style.fill = "";
             
@@ -37,7 +92,7 @@ export const Header = () => {
         var wth = window.innerWidth;
         var slide;
         wth<=1000?slide="-100%":slide="-600px";
-        if(cartmenu=="0%") {
+        if(cartmenu==="0%") {
             setCartMenu(slide)
             document.getElementsByClassName("header__cart")[0].style.fill = "";
             
@@ -50,12 +105,112 @@ export const Header = () => {
         }
     }
     return <div className="header">
+        <div className="header__checkoutwindow" id={checkout}>
+            <div className="checkout__window">
+            <div id="close" onClick={() => {openCheckout("hide")}}>X</div>
+            <div className="checkout__content">
+                <p>Итого к оплате: {cartsum.toPrecision(3)}$</p>
+                <form onSubmit={handleSubmit(onSubmit)}>
+                <div>
+          <label>E-mail</label>
+          <input
+            type="email"
+            placeholder="Введите email"
+            {...register("email", {
+              required: "Введите email",
+              pattern: {
+                value: /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/,
+                message: "Введиье корректный email"
+              }
+            })}
+          />
+          <br/>
+          {errors.email && <font>{errors.email.message}</font>}
+        </div>
+        <div>
+          <label>Номер карты</label>
+          <input
+            type="text"
+            placeholder="XXXXXXXXXXXXXXXX"
+            {...register("cardNumber", {
+              required: "Введите номер карты",
+              pattern: {
+                value: /^[0-9]{16}$/,
+                message: "Номер карты должен содержать 16 цифр"
+              }
+            })}
+          />
+          <br/>
+          {errors.cardNumber && <font>{errors.cardNumber.message}</font>}
+        </div>
+
+        <div>
+          <label>Срок действия</label>
+          <input
+            type="text"
+            placeholder="MM/YY"
+            {...register("expiryDate", {
+              required: "Введите срок действия",
+              pattern: {
+                value: /^(0[1-9]|1[0-2])\/\d{2}$/,
+                message: "Введите срок в формате MM/YY"
+              }
+            })}
+          />
+          <br/>
+          {errors.expiryDate && <font>{errors.expiryDate.message}</font>}
+        </div>
+
+        <div>
+          <label>CVV</label>
+          <input
+            type="password"
+            placeholder="123"
+            {...register("cvv", {
+              required: "Введите CVV",
+              pattern: {
+                value: /^[0-9]{3,4}$/,
+                message: "CVV должен содержать 3 или 4 цифры"
+              }
+            })}
+          />
+          <br/>
+          {errors.cvv && <font>{errors.cvv.message}</font>}
+        </div>
+
+        <div>
+          <label>Имя владельца карты</label>
+          <input
+            type="text"
+            placeholder="PETR IVANOV"
+            {...register("cardHolder", {
+              required: "Введите имя владельца",
+              minLength: {
+                value: 2,
+                message: "Имя должно содержать не менее 2 символов"
+              }
+            })}
+          />
+          <br/>
+          {errors.cardHolder && <font>{errors.cardHolder.message}</font>}
+        </div>
+
+        <button type="submit">Оплатить</button>
+      </form>
+            </div>
+            <div className="checkout__payments">
+                <img alt="visa" height="50" src={Visa}/>
+                <img alt="mastercard" height="50" src={Mastercard}/>
+                <img alt="mir" height="50" src={Mir}/>
+            </div>
+                
+            </div>
+        </div>
         <div className="header__burger" onClick={menuOpen} style={{ transform: `rotate(${rotate + "deg"})` }}>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 10H3V4a1 1 0 0 1 1-1h6zm11-6a1 1 0 0 0-1-1h-6v7h7zM4 21h6v-7H3v6a1 1 0 0 0 1 1zm17-1v-6h-7v7h6a1 1 0 0 0 1-1z"/></svg>
         </div>
         <div className="header__logo">
-            {/* <Link to="/core-such-s"><p>Septima</p></Link> */}
-            {/* <span>Винил, который вдохновляет.</span> */}
+        <Link to='core-such-s' className='link'><p>Septima</p></Link>
         </div>
         <div className="header__cart" onClick={cartmenuOpen} onTo={cartmenuOpen}>
         <svg xmlns="http://www.w3.org/2000/svg" width="60" height="50.4" viewBox="0 0 1024 1024" id="cart">
@@ -68,20 +223,36 @@ export const Header = () => {
   <path d="M941.5 252.5c-13.7 35.3-27.3 70.6-41 105.9-21.8 56.3-43.6 112.5-65.3 168.8-5 12.9-10 25.9-15 38.8 6.4-4.9 12.9-9.8 19.3-14.7H430.4c-18.8 0-37.8-.8-56.7 0h-.8c6.4 4.9 12.9 9.8 19.3 14.7-11.7-35.5-23.3-70.9-35-106.4-18.5-56.1-37-112.2-55.4-168.4-4.3-12.9-8.5-25.8-12.8-38.8-6.4 8.4-12.9 16.9-19.3 25.3H932.8c9 0 18 .2 26.9 0h1.2c10.5 0 20.5-9.2 20-20s-8.8-20-20-20H297.8c-9 0-18-.2-26.9 0h-1.2c-12.5 0-23.4 12.9-19.3 25.3 11.7 35.5 23.3 70.9 35 106.4 18.5 56.1 37 112.2 55.4 168.4 4.3 12.9 8.5 25.8 12.8 38.8 2.8 8.4 10.2 14.7 19.3 14.7H782c18.8 0 37.8.7 56.7 0h.8c9.5 0 16.1-6.4 19.3-14.7 13.7-35.3 27.3-70.6 41-105.9 21.8-56.3 43.6-112.5 65.3-168.8 5-12.9 10-25.9 15-38.8 3.8-9.8-4.2-22.4-14-24.6-11.5-2.6-20.6 3.5-24.6 14z"></path>
 </svg></div>
         <div className="header__menu" style={{left: menu}}>
-        {/* <Link to='/core-such-s'><div className="header__main">Главная</div></Link>
-        <Link to='/catalog'><div>Каталог</div></Link> */}
-        <div>Заказы</div>
-        <div>О нас</div>
+        <Link to="core-such-s"><div className="header__main" id="mainpage" onClick={menuOpen}>Главная</div></Link>
+        <Link to="catalog"><div className="header__main" onClick={menuOpen}>Каталог</div></Link>
+        <Link to="about"><div className="header__main" onClick={menuOpen}>О нас</div></Link>
         <span className="header__grad"></span>
         </div>
         <div className="header__cartmenu" style={{right: cartmenu}}>
             <div className="header__cartcontent">
-                <div></div>
+                {cart.map((elem) => {
+                    return <div className='header__cartelement'>
+                        <img alt="minialbum" src={elem.imageUrl} style={{width: "100px", height: "100px"}}/>
+                        <div style={{display: "flex", flexDirection: "column", textAlign: "start", marginLeft: "15px"}}>
+                        <h1 style={{fontSize: "26px"}}>{elem.title}</h1>
+                        <h2>{elem.price}$</h2>
+                        <button id="delete" onClick={() => {dispatch(delCart(elem.title))}}>x</button>
+                        </div>
+                    </div>
+                })}
             </div>
-            <div>
+            <div className='header__checkout'>
                 <hr/>
-                <p>Итого: х рублей</p>
-                <button>Перейти к оформлению</button>
+                <p>Итого: {cartsum.toPrecision(4)}$</p>
+                <button onClick={() => {
+                  if(parseInt(cartsum) === 0) {
+                    alert("Ваша корзина пуста!");
+                  }
+                  else {
+                  openCheckout("show")
+                }
+                  
+                  }}>Перейти к оформлению</button>
             </div>
         </div>
     </div>

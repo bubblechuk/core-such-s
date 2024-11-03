@@ -4,224 +4,547 @@
         "description": "Легендарный альбом The Beatles, вышедший в 1969 году.",
         "genre": "Rock",
         "year": 1969,
-        "tracklist": ["Come Together", "Something", "Here Comes the Sun", "Golden Slumbers"],
+        "tracklist": [
+            "Come Together",
+            "Something",
+            "Here Comes the Sun",
+            "Maxwell's Silver Hammer",
+            "Oh! Darling",
+            "Octopus's Garden",
+            "I Want You (She's So Heavy)",
+            "Golden Slumbers",
+            "Carry That Weight",
+            "The End"
+            ],
         "price": 29.99,
-        "artist": "The Beatles"
+        "artist": "The Beatles",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/4/42/Beatles_-_Abbey_Road.jpg"
     },
     {
         "title": "Dark Side of the Moon",
         "description": "Эпический альбом Pink Floyd, символ прогрессивного рока.",
         "genre": "Progressive Rock",
         "year": 1973,
-        "tracklist": ["Speak to Me", "Breathe", "Time", "Money"],
+        "tracklist": [
+            "Speak to Me",
+            "Breathe",
+            "On the Run",
+            "Time",
+            "The Great Gig in the Sky",
+            "Money",
+            "Us and Them",
+            "Any Colour You Like",
+            "Brain Damage",
+            "Eclipse"
+            ],
         "price": 24.99,
-        "artist": "Pink Floyd"
+        "artist": "Pink Floyd",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/3/3b/Dark_Side_of_the_Moon.png"
     },
     {
         "title": "Thriller",
         "description": "Самый продаваемый альбом Майкла Джексона.",
         "genre": "Pop",
         "year": 1982,
-        "tracklist": ["Thriller", "Beat It", "Billie Jean"],
+        "tracklist": [
+            "Wanna Be Startin' Somethin'",
+            "Baby Be Mine",
+            "The Girl Is Mine",
+            "Thriller",
+            "Beat It",
+            "Billie Jean",
+            "Human Nature",
+            "P.Y.T. (Pretty Young Thing)",
+            "The Lady in My Life"
+            ],
         "price": 34.99,
-        "artist": "Michael Jackson"
+        "artist": "Michael Jackson",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png"
     },
     {
         "title": "The Wall",
         "description": "Концептуальный альбом Pink Floyd о самоизоляции.",
         "genre": "Progressive Rock",
         "year": 1979,
-        "tracklist": ["Another Brick in the Wall", "Comfortably Numb"],
+        "tracklist": [
+            "In the Flesh?",
+            "The Thin Ice",
+            "Another Brick in the Wall, Pt. 1",
+            "The Happiest Days of Our Lives",
+            "Another Brick in the Wall, Pt. 2",
+            "Mother",
+            "Goodbye Blue Sky",
+            "Empty Spaces",
+            "Young Lust",
+            "One of My Turns",
+            "Don't Leave Me Now",
+            "Another Brick in the Wall, Pt. 3",
+            "Goodbye Cruel World",
+            "Hey You",
+            "Is There Anybody Out There?",
+            "Comfortably Numb",
+            "The Show Must Go On",
+            "In the Flesh",
+            "Run Like Hell",
+            "Waiting for the Worms",
+            "Stop",
+            "The Trial",
+            "Outside the Wall"
+            ],
         "price": 39.99,
-        "artist": "Pink Floyd"
+        "artist": "Pink Floyd",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/ru/1/13/PinkFloydWallCoverOriginalNoText.jpg"
     },
     {
         "title": "Back in Black",
         "description": "Альбом AC/DC, посвященный памяти вокалиста Бона Скотта.",
         "genre": "Hard Rock",
         "year": 1980,
-        "tracklist": ["Hells Bells", "Back in Black"],
+        "tracklist": [
+"Hells Bells",
+"Shoot to Thrill",
+"What Do You Do for Money Honey",
+"Girls Got Rhythm",
+"Let Me Put My Love Into You",
+"Back in Black",
+"You Shook Me All Night Long",
+"Have a Drink on Me",
+"Shake a Leg",
+"Rock and Roll Ain't Noise Pollution"
+],
         "price": 27.99,
-        "artist": "AC/DC"
+        "artist": "AC/DC",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/ACDC_Back_in_Black_cover.svg/1024px-ACDC_Back_in_Black_cover.svg.png"
     },
     {
         "title": "Rumours",
         "description": "Иконический альбом Fleetwood Mac, наполненный хитами.",
         "genre": "Rock",
         "year": 1977,
-        "tracklist": ["Dreams", "Go Your Own Way", "The Chain"],
+        "tracklist": [
+"Second Hand News",
+"Dreams",
+"Never Going Back Again",
+"Don't Stop",
+"Go Your Own Way",
+"Songbird",
+"The Chain",
+"You Make Loving Fun",
+"I Don't Want to Know",
+"I Shall Believe"
+],
         "price": 25.99,
-        "artist": "Fleetwood Mac"
+        "artist": "Fleetwood Mac",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/f/fb/FMacRumours.PNG"
     },
     {
         "title": "Nevermind",
         "description": "Альбом Nirvana, изменивший историю гранжа.",
         "genre": "Grunge",
         "year": 1991,
-        "tracklist": ["Smells Like Teen Spirit", "Come as You Are"],
+"tracklist": [
+"Smells Like Teen Spirit",
+"In Bloom",
+"Come as You Are",
+"Breed",
+"Lithium",
+"Polly",
+"Territorial Pissings",
+"Drain You",
+"Lounge Act",
+"Stay Away",
+"On a Plain",
+"Something in the Way"
+],
         "price": 22.99,
-        "artist": "Nirvana"
+        "artist": "Nirvana",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/ru/b/b7/NirvanaNevermindalbumcover.jpg"
     },
     {
         "title": "The Joshua Tree",
         "description": "Альбом U2, представляющий ирландскую рок-сцену.",
         "genre": "Rock",
         "year": 1987,
-        "tracklist": ["With or Without You", "I Still Haven't Found What I'm Looking For"],
+"tracklist": [
+"Where the Streets Have No Name",
+"I Still Haven't Found What I'm Looking For",
+"With or Without You",
+"Bullet the Blue Sky",
+"Running to Stand Still",
+"Red Hill Mining Town",
+"In God's Country",
+"Trip Through Your Wires",
+"One Tree Hill",
+"Exit",
+"Mothers of the Disappeared"
+],
         "price": 26.99,
-        "artist": "U2"
+        "artist": "U2",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/6/6b/The_Joshua_Tree.png"
     },
     {
         "title": "OK Computer",
         "description": "Альбом Radiohead о страхах техногенного будущего.",
         "genre": "Alternative Rock",
         "year": 1997,
-        "tracklist": ["Paranoid Android", "No Surprises"],
+"tracklist": [
+"Airbag",
+"Paranoid Android",
+"Subterranean Homesick Alien",
+"Exit Music (for a Film)",
+"Let Down",
+"Karma Police",
+"Fitter Happier",
+"Electioneering",
+"Climbing Up the Walls",
+"No Surprises",
+"Lucky",
+"The Tourist"
+],
         "price": 30.99,
-        "artist": "Radiohead"
+        "artist": "Radiohead",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/ru/9/93/RadioheadOkComputer.jpg"
     },
     {
         "title": "Purple Rain",
         "description": "Знаменитый альбом Принса и The Revolution.",
         "genre": "Pop",
         "year": 1984,
-        "tracklist": ["Purple Rain", "When Doves Cry"],
+"tracklist": [
+"Let's Go Crazy",
+"Take Me With U",
+"The Beautiful Ones",
+"Computer Blue",
+"Darling Nikki",
+"When Doves Cry",
+"I Would Die 4 U",
+"Baby I'm a Star",
+"Purple Rain"
+],
         "price": 28.99,
-        "artist": "Prince"
+        "artist": "Prince",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/ru/thumb/9/9c/Princepurplerain.jpg/1024px-Princepurplerain.jpg"
     },
     {
         "title": "Led Zeppelin IV",
         "description": "Культовый альбом Led Zeppelin с их главным хитом.",
         "genre": "Hard Rock",
         "year": 1971,
-        "tracklist": ["Stairway to Heaven", "Black Dog"],
+"tracklist": [
+"Black Dog",
+"Rock and Roll",
+"The Battle of Evermore",
+"Stairway to Heaven",
+"Misty Mountain Hop",
+"Four Sticks",
+"Going to California",
+"When the Levee Breaks"
+],
         "price": 32.99,
-        "artist": "Led Zeppelin"
+        "artist": "Led Zeppelin",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/ru/c/c7/Led_zeppelin_IV_front.jpg"
     },
     {
         "title": "Born to Run",
         "description": "Классика Брюса Спрингстина, олицетворяющая мечту свободы.",
         "genre": "Rock",
         "year": 1975,
-        "tracklist": ["Born to Run", "Thunder Road"],
+"tracklist": [
+"Thunder Road",
+"Tenth Avenue Freeze-Out",
+"Night",
+"Backstreets",
+"Born to Run",
+"She's the One",
+"Meeting Across the River",
+"Jungleland"
+],
         "price": 21.99,
-        "artist": "Bruce Springsteen"
+        "artist": "Bruce Springsteen",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/7/7a/Born_to_Run_%28Front_Cover%29.jpg"
     },
     {
         "title": "Hotel California",
         "description": "Альбом The Eagles с одноименным хитом.",
         "genre": "Rock",
         "year": 1976,
-        "tracklist": ["Hotel California", "New Kid in Town"],
+"tracklist": [
+"Hotel California",
+"Life in the Fast Lane",
+"Wasted Time",
+"Wasted Time (Reprise)",
+"Try and Love Again",
+"The Last Resort"
+],
         "price": 24.99,
-        "artist": "The Eagles"
+        "artist": "The Eagles",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/4/49/Hotelcalifornia.jpg"
     },
     {
         "title": "A Night at the Opera",
         "description": "Альбом Queen с культовой песней Bohemian Rhapsody.",
         "genre": "Rock",
         "year": 1975,
-        "tracklist": ["Bohemian Rhapsody", "You're My Best Friend"],
+"tracklist": [
+"Death on Two Legs (Dedicated to...)",
+"Lazing on a Sunday Afternoon",
+"I'm in Love with My Car",
+"You're My Best Friend",
+"God Save the Queen",
+"'39",
+"Sweet Lady",
+"Seaside Rendezvous",
+"The Prophet's Song",
+"Love of My Life",
+"Good Company",
+"Bohemian Rhapsody",
+"God Save the Queen"
+],
         "price": 27.99,
-        "artist": "Queen"
+        "artist": "Queen",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/4/4d/Queen_A_Night_At_The_Opera.png"
     },
     {
         "title": "Exile on Main St.",
         "description": "Альбом Rolling Stones, воплощение их духа.",
         "genre": "Rock",
         "year": 1972,
-        "tracklist": ["Rocks Off", "Tumbling Dice"],
+"tracklist": [
+"Rocks Off",
+"Rip This Joint",
+"Shake Your Hips",
+"Casino Boogie",
+"Tumbling Dice",
+"Sweet Virginia",
+"You Got the Silver",
+"Happy",
+"Midnight Rambler",
+"Hip Shaker",
+"All Down the Line",
+"Stop Breaking Down",
+"Turd on the Run",
+"Ventilator Blues",
+"I Just Want to See His Face",
+"Let It Loose",
+"All I Need",
+"Shine a Light"
+],
         "price": 23.99,
-        "artist": "The Rolling Stones"
+        "artist": "The Rolling Stones",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/c/ca/ExileMainSt.jpg"
     },
     {
         "title": "Pet Sounds",
         "description": "Новаторский альбом Beach Boys.",
         "genre": "Pop Rock",
         "year": 1966,
-        "tracklist": ["Wouldn't It Be Nice", "God Only Knows"],
+"tracklist": [
+"Wouldn't It Be Nice",
+"You Still Believe in Me",
+"That's Not Me",
+"Don't Talk (Put Your Head on My Shoulder)",
+"I'm Waiting for the Day",
+"Let's Go Away for Awhile",
+"Sloop John B",
+"God Only Knows",
+"I Know There's an Answer",
+"Here Today",
+"I Just Wasn't Made for These Times",
+"Pet Sounds",
+"Caroline, No"
+],
         "price": 29.99,
-        "artist": "The Beach Boys"
+        "artist": "The Beach Boys",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/b/bb/PetSoundsCover.jpg"
     },
     {
         "title": "Appetite for Destruction",
         "description": "Дебютный альбом Guns N' Roses, ставший классикой.",
         "genre": "Hard Rock",
         "year": 1987,
-        "tracklist": ["Welcome to the Jungle", "Sweet Child o' Mine"],
+"tracklist": [
+"Welcome to the Jungle",
+"It's So Easy",
+"Nightrain",
+"Out ta Get Me",
+"Sweet Child O' Mine",
+"Paradise City",
+"My Michelle",
+"Think About You",
+"Rocket Queen"
+],
         "price": 28.99,
-        "artist": "Guns N' Roses"
+        "artist": "Guns N' Roses",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/6/60/GunsnRosesAppetiteforDestructionalbumcover.jpg"
     },
     {
         "title": "Who's Next",
         "description": "Альбом The Who с сильными музыкальными композициями.",
         "genre": "Rock",
         "year": 1971,
-        "tracklist": ["Baba O'Riley", "Won't Get Fooled Again"],
+"tracklist": [
+"Baba O'Riley",
+"Bargain",
+"Love Ain't for Keepin'",
+"My Wife",
+"The Song Is Over",
+"Behind Blue Eyes",
+"Won't Get Fooled Again"
+],
         "price": 22.99,
-        "artist": "The Who"
+        "artist": "The Who",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/4/44/Whosnext.jpg"
     },
     {
         "title": "London Calling",
         "description": "Культовый альбом The Clash, символ панк-рока.",
         "genre": "Punk Rock",
         "year": 1979,
-        "tracklist": ["London Calling", "Train in Vain"],
+"tracklist": [
+"London Calling",
+"Brand New Cadillac",
+"Jimmy Jazz",
+"Hateful",
+"Rudie Can't Fail",
+"Spanish Bombs",
+"The Right Profile",
+"Lost in the Supermarket",
+"Clampdown",
+"The Guns of Brixton",
+"Wrong 'Em Boyo",
+"Death or Glory",
+"Koka Kola",
+"The Card Cheat",
+"Four Horsemen",
+"I'm Not Down",
+"Revolution Rock",
+"Train in Vain"
+],
         "price": 26.99,
-        "artist": "The Clash"
+        "artist": "The Clash",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/0/00/TheClashLondonCallingalbumcover.jpg"
     },
     {
-        "title": "The Velvet Underground & Nico",
+        "title": "The VU & Nico",
         "description": "Дебютный альбом Velvet Underground, ставший революцией.",
         "genre": "Art Rock",
         "year": 1967,
-        "tracklist": ["Sunday Morning", "Venus in Furs"],
+"tracklist": [
+"Sgt. Pepper's Lonely Hearts Club Band",
+"With a Little Help from My Friends",
+"Lucy in the Sky with Diamonds",
+"Getting Better",
+"Fixing a Hole",
+"She's Leaving Home",
+"Being for the Benefit of Mr. Kite!",
+"Within You Without You",
+"When I'm Sixty-Four",
+"Lovely Rita",
+"Good Morning, Good Morning",
+"Sgt. Pepper's Lonely Hearts Club Band (Reprise)",
+"A Day in the Life"
+],
         "price": 31.99,
-        "artist": "The Velvet Underground"
+        "artist": "The Velvet Underground",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/0/0c/Velvet_Underground_and_Nico.jpg"
     },
     {
         "title": "Kind of Blue",
         "description": "Знаменитый джазовый альбом Майлза Дэвиса.",
         "genre": "Jazz",
         "year": 1959,
-        "tracklist": ["So What", "Freddie Freeloader"],
+"tracklist": [
+"So What",
+"Freddie Freeloader",
+"Blue in Green",
+"All Blues",
+"Flamenco Sketches"
+],
         "price": 27.99,
-        "artist": "Miles Davis"
+        "artist": "Miles Davis",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Kind_of_Blue_%281959%2C_CL_1355%29_album_cover.jpg/1024px-Kind_of_Blue_%281959%2C_CL_1355%29_album_cover.jpg"
     },
     {
         "title": "Master of Puppets",
         "description": "Альбом Metallica, вершина трэш-метала.",
         "genre": "Thrash Metal",
         "year": 1986,
-        "tracklist": ["Battery", "Master of Puppets"],
+"tracklist": [
+"Battery",
+"Master of Puppets",
+"The Thing That Should Not Be",
+"Welcome Home (Sanitarium)",
+"Disposable Heroes",
+"Tornado of Souls",
+"Damage, Inc."
+],
         "price": 28.99,
-        "artist": "Metallica"
+        "artist": "Metallica",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/b/b2/Metallica_-_Master_of_Puppets_cover.jpg"
     },
     {
         "title": "The Rise and Fall of Ziggy Stardust",
         "description": "Космический альбом Дэвида Боуи.",
         "genre": "Glam Rock",
         "year": 1972,
-        "tracklist": ["Starman", "Suffragette City"],
+"tracklist": [
+"Five Years",
+"Soul Love",
+"Moonage Daydream",
+"Starman",
+"It Ain't Easy",
+"Lady Stardust",
+"Star",
+"Hang On to Yourself",
+"Ziggy Stardust",
+"Suffragette City",
+"Rock 'n' Roll Suicide"
+],
         "price": 26.99,
-        "artist": "David Bowie"
+        "artist": "David Bowie",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/0/01/ZiggyStardust.jpg"
     },
     {
         "title": "Blood on the Tracks",
         "description": "Глубоко личный альбом Боба Дилана.",
         "genre": "Folk Rock",
         "year": 1975,
-        "tracklist": ["Tangled Up in Blue", "Simple Twist of Fate"],
+"tracklist": [
+"Tangled Up in Blue",
+"Simple Twist of Fate",
+"You're a Big Girl Now",
+"Idiot Wind",
+"You're Gonna Make Me Lonesome When You Go",
+"Meet Me in the Morning",
+"Lily, Rosemary and the Jack of Hearts",
+"If You See Her, Say Hello",
+"Shelter from the Storm",
+"Buckets of Rain"
+],
         "price": 23.99,
-        "artist": "Bob Dylan"
+        "artist": "Bob Dylan",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/f/fa/Bob_Dylan_-_Blood_on_the_Tracks.jpg"
     },
     {
         "title": "Tapestry",
         "description": "Знаковый альбом Кэрол Кинг.",
         "genre": "Soft Rock",
         "year": 1971,
-        "tracklist": ["I Feel the Earth Move", "It's Too Late"],
+"tracklist": [
+"I Feel the Earth Move",
+"So Far Away",
+"It's Too Late",
+"Home Again",
+"Beautiful",
+"Way Over Yonder",
+"You've Got a Friend",
+"Where You Lead",
+"Will You Love Me Tomorrow",
+"Tapestry",
+"(You Make Me Feel Like) A Natural Woman"
+],
         "price": 22.99,
-        "artist": "Carole King"
+        "artist": "Carole King",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/5/52/Carole_King_-_Tapestry.jpg"
     }
 ]

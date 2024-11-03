@@ -1,13 +1,17 @@
 .catalog {
     display: flex;
     justify-content: center;
-    height: auto;
+    height: 1180px;
 }
 .catalog__filters {
     width: 300px;
     height: auto;
     background-color: #0068B4;
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15px;
 }
 .catalog__content {
     width: 1000px;
@@ -22,8 +26,26 @@
     margin: 25px 0 0 25px;
     background-color: aliceblue;
     width: 300px;
-    height: 400px;
-    border: 1px solid black;
+    height: 525px; /*400*/
+    position: relative;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    transition: 0.5s;
+    border-radius: 5px;
+}
+.catalog__element:hover {
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+    transition: 0.5s;
+}
+.catalog__element a {
+    text-decoration: none;
+    color: black;
+}
+.catalog_element a, h1, h2, h3, h4, h5 {
+    margin: 0px;
+    width: auto;
+}
+.catalog__element h1 {
+    font-size: 26px;
 }
 .checkbox {
     width: auto;
@@ -33,4 +55,185 @@
     width: 300px;
     height: 300px;
     background-color: #0068B4;
+    border-bottom: 1px solid black;
+}
+div p {
+    margin: 5px;
+}
+div button {
+    text-align: center;
+}
+#search {
+    border: 0;
+    border-radius: 5px;
+    height: 30px;
+    font-size: 14px;
+    width: 270px;
+    margin: 10px;
+}
+#year {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+#range {
+    width: 270px;
+    margin: 0 15px 0 15px;
+}
+#genre {
+    width: 100%;
+}
+#genre p {
+    text-align: center;
+}
+.genres {
+    width: 100%;
+    margin-left: 10px;
+}
+#year, #filters {
+    margin: 5px;
+}
+#year input {
+    border-radius: 5px;
+    border: 0;
+}
+#filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#filters p {
+    text-align: center;
+    width: 100%;
+}
+#filters button {
+    background-color: white;
+    border-radius: 5px;
+    border: 0;
+    margin: 3px;
+}
+.catalog__title {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+.catalog__title h2 {
+    line-height: 72px;
+}
+.catalog__element button {
+    width: 80%;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #0068B4;
+    border: 0;
+    color: white;
+    font-size: 18px;
+    position: absolute;
+    bottom: 10px;
+    left: 30px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.catalog__element button:hover {
+    background-color: #6CABD9;
+    transition: 0.5s;
+}
+.catalog__pagination {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+.catalog__pagination div {
+    width: auto;
+    border-radius: 5px;
+}
+.catalog__pagination button {
+    border-radius: 10px;
+    color: white;
+    background-color: #0068B4;
+    border: 0;
+    width: 25px;
+    height: 25px;
+}
+.catalog__pagination span {
+    font-weight: bold;
+}
+.scroll__filter {
+    display: none;
+}
+#filer_up {
+    display: block;
+}
+#filter_down {
+    display: block;
+}
+#year input {
+    width: 150px;
+    text-align: center;
+}
+.catalog__filters p {
+    text-align: center;
+}
+@media (max-width: 1366px) {
+    .catalog__content {
+        padding-right: 0;
+    }
+    #filer_up {
+        display: block;
+    }
+    #filter_down {
+        display: none;
+    }
+    .catalog__filters {
+        z-index: 3;
+        width: 80%;
+        padding-left: 10%;
+        padding-right: 10%;
+        height: fit-content;
+        font-size: 24px;
+    }
+    .scroll__filter {
+        line-height: 50px;
+        display: block;
+        width: 100%;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        height: 50px;
+        text-align: center;
+        font-size: 30px;
+        padding: 15px 0 15px 0;
+        color: white;
+        background-color: #0068B4;
+    }
+    .genres {
+        font-size: 20px;
+    }
+    .genres input {
+        width: 25px;
+        height: 25px;
+    }
+    #search, #filters button, #year p, #year input{
+        font-size: 20px;
+    }
+    #year {
+        height: 30px;
+        line-height: 20px;;
+    }
+    .catalog {
+        height: auto;
+        flex-direction: column;
+    }
+    .catalog__content {
+        width: 100%;
+    }
+    .catalog__element {
+        margin: 25px;
+    }
+    .catalog__pagination button {
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        font-size: 24px;
+        margin: 25px;
+    }
 }

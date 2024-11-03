@@ -3,8 +3,21 @@ import {Header} from './header/Header'
 import {Main} from './Main'
 import {Footer} from './footer/Footer'
 import {Catalog} from './catalog/Catalog'
+import {Product} from './product/Product'
+import {About} from './about/About'
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom'
 import './App.css'
 function App() {
+  const ScrollToTop = () => {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0); // Сбрасываем прокрутку в начало
+    }, [pathname]); // Запускаем эффект при изменении маршрута
+
+    return null; // Этот компонент ничего не рендерит
+};
   window.onload = () => {
     if (window.innerWidth >= 1000) {
       var logo = document.getElementsByClassName("header__logo")[0].childNodes[0];
@@ -31,14 +44,21 @@ function App() {
           })
   return (
     <div>
-    <Header/>
+    
     <Router>
+    <ScrollToTop />
+    <Header/>
+    <div className='content'>
       <Routes>
-        <Route path='/' element={<Main />} />
+        <Route path='/core-such-s' element={<Main />} />
         <Route path='/catalog' element={<Catalog />} />
+        <Route path='/product' element={<Product />}/>
+        <Route path='/about' element={<About />}/>
       </Routes>
+      </div>
+          <Footer/>
     </Router>
-    <Footer/>
+
     </div>
   )
 }

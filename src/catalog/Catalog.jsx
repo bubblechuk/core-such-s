@@ -2,16 +2,17 @@ import './catalog.css';
 import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setSorted, sortListByName, sortList as sortByPrice, sortByArtist, sortByGenre, sortByYear } from '../slices/listsSlice';
-
+import { CatalogList } from './CatalogList';
 export const Catalog = () => {
     const dispatch = useDispatch();
     const list = useSelector(state => state.catalog.catalog);
     const sortList = useSelector(state => state.sorted.sorted);
     const [selectedGenres, setSelectedGenres] = useState([]);
+    const [filters, setFilters] = useState(false);
     const [range, setRange] = useState(50);
     const [year, setYear] = useState(''); 
     const uniqueGenres = [...new Set(list.map(item => item.genre))];
-
+    const page = 1;
     useEffect(() => {
         dispatch(setSorted(list));
     }, [list, dispatch]);
@@ -37,21 +38,20 @@ export const Catalog = () => {
             const filteredByGenreAndPrice = list.filter(item =>
                 (selectedGenres.length === 0 || selectedGenres.includes(item.genre)) &&
                 item.price < range &&
-                item.year < year
+                (year === '' || item.year < year) 
             );
             dispatch(setSorted(filteredByGenreAndPrice));
             return;
         }
-
+    
         const searchsort = list.filter(item => 
             (selectedGenres.length === 0 || selectedGenres.includes(item.genre)) &&
             item.title.includes(obj) &&
             item.price < range &&
-            item.year < year
+            (year === '' || item.year < year) 
         );
         dispatch(setSorted(searchsort));
     };
-
     const rangeChange = (obj) => {
         setRange(obj);
         const filteredList = list.filter(item =>
@@ -74,23 +74,28 @@ export const Catalog = () => {
 
     return (
         <div className="catalog">
-            <div className='catalog__filters'>
-                <input placeholder='Поиск...' onChange={(e) => { Search(e.target.value) }} />
-                <input 
+                        <div className="scroll__filter" onClick={() => {setFilters(!filters)}}>Свернуть</div>
+            <div className='catalog__filters' id={`${filters?"filter_up":"filter_down"}`}>
+                <input id="search" placeholder='Поиск...' onChange={(e) => { Search(e.target.value) }} />
+                <input id="range"
                     type="range"
                     value={range} 
                     onChange={(e) => { rangeChange(e.target.value) }} 
                 />
                 <p>Цена до: {range}$</p>
-                <p>Сортировать по: </p>
-                <button onClick={() => {dispatch(sortByPrice())}}>Цене</button>
-                <button onClick={() => {dispatch(sortListByName())}}>Названию</button>
-                <button onClick={() => {dispatch(sortByArtist())}}>Исполнителю</button>
-                <button onClick={() => {dispatch(sortByGenre())}}>Жанру</button>
-                <button onClick={() => {dispatch(sortByYear())}}>Году выпуска</button>
-                <p>Жанр:</p>
+                <div id='filters'>
+                    <p style={{textAlign: "center"}}>Сортировать по</p>
+                    <br/>
+                    <button onClick={() => {dispatch(sortByPrice())}}>Цене</button>
+                    <button onClick={() => {dispatch(sortListByName())}}>Названию</button>
+                    <button onClick={() => {dispatch(sortByArtist())}}>Исполнителю</button>
+                    <button onClick={() => {dispatch(sortByGenre())}}>Жанру</button>
+                    <button onClick={() => {dispatch(sortByYear())}}>Году выпуска</button>
+                </div>
+                <div id='genre'>
+                <p>Жанр</p>
                 {uniqueGenres.map((genre) => (
-                    <div key={genre}>
+                    <div className='genres' key={genre}>
                         <input 
                             type="checkbox" 
                             className="checkbox"
@@ -100,6 +105,8 @@ export const Catalog = () => {
                         <label>{genre}</label>
                     </div>
                 ))}
+                </div>
+                <div id="year">
                 <p>Релизы до: </p>
                 <input 
                     type="number" 
@@ -107,21 +114,9 @@ export const Catalog = () => {
                     value={year} 
                     onChange={(e) => { yearFilter(e.target.value) }} 
                 />
+                </div>
             </div>
-            <div className='catalog__content'>
-                {sortList.length > 0 ?
-                    sortList.map((elem) => (
-                        <div className="catalog__element" key={elem.id}>
-                            <img src={elem.imageUrl} alt={elem.title} />
-                            <h1>{elem.title}</h1>
-                            <h2>{elem.artist}</h2>
-                            <h3>{elem.price}</h3>
-                            <h4>{elem.genre}</h4>
-                            <h5>{elem.year}</h5>
-                        </div>
-                    )) : <div>Не найдено</div>
-                }
+                <CatalogList sortList={sortList} page={page}/>
             </div>
-        </div>
     );
 };
