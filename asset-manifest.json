@@ -1,18 +1,22 @@
 {
   "files": {
-    "main.css": "/core-such-s/static/css/main.cc689170.css",
-    "main.js": "/core-such-s/static/js/main.a8787a5d.js",
-    "static/js/453.9710a42a.chunk.js": "/core-such-s/static/js/453.9710a42a.chunk.js",
+    "main.css": "/core-such-s/static/css/main.c1408875.css",
+    "main.js": "/core-such-s/static/js/main.d536c9a2.js",
+    "static/js/453.881574dd.chunk.js": "/core-such-s/static/js/453.881574dd.chunk.js",
     "static/media/smile.png": "/core-such-s/static/media/smile.fc11f768616521970e82.png",
     "static/media/thundercat.png": "/core-such-s/static/media/thundercat.4985df4d145748c5c999.png",
+    "static/media/font.otf": "/core-such-s/static/media/font.4b772afe9004c14e0e87.otf",
     "static/media/social1.png": "/core-such-s/static/media/social1.a15f0b57535a707555d7.png",
+    "static/media/mastercard.svg": "/core-such-s/static/media/mastercard.be8617e52d4806e8067b82ca0a7b66e0.svg",
+    "static/media/mir.svg": "/core-such-s/static/media/mir.973f0b6758a25de537c204e24f1e215c.svg",
+    "static/media/visa.svg": "/core-such-s/static/media/visa.065d9ee35bddbe02fe50bd4ab6c80f39.svg",
     "index.html": "/core-such-s/index.html",
-    "main.cc689170.css.map": "/core-such-s/static/css/main.cc689170.css.map",
-    "main.a8787a5d.js.map": "/core-such-s/static/js/main.a8787a5d.js.map",
-    "453.9710a42a.chunk.js.map": "/core-such-s/static/js/453.9710a42a.chunk.js.map"
+    "main.c1408875.css.map": "/core-such-s/static/css/main.c1408875.css.map",
+    "main.d536c9a2.js.map": "/core-such-s/static/js/main.d536c9a2.js.map",
+    "453.881574dd.chunk.js.map": "/core-such-s/static/js/453.881574dd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cc689170.css",
-    "static/js/main.a8787a5d.js"
+    "static/css/main.c1408875.css",
+    "static/js/main.d536c9a2.js"
   ]
 }
